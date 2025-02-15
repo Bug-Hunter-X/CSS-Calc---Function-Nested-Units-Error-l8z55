@@ -1,0 +1,10 @@
+The following CSS code snippet demonstrates an uncommon error involving the `calc()` function and nested units:
+
+```css
+.element {
+  width: calc(50% - 10px);
+  height: calc(calc(100% - 20px) * 2);
+}
+```
+
+The inner `calc()` function attempts to perform multiplication on a value with a unit ( `100% - 20px` which results in a mixed unit value).  This is not directly supported by all browsers, leading to unexpected results or errors.  Older browsers might fail to render the element correctly. 
