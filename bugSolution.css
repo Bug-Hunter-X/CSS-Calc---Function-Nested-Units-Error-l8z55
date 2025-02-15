@@ -1,0 +1,12 @@
+The solution involves restructuring the calculation to avoid mixing units within a single `calc()` operation:
+
+```css
+.element {
+  width: calc(50% - 10px);
+  height: calc(100% - 20px * 2);
+  /* or */
+  height: calc(100% - 40px);
+}
+```
+
+By separating the calculation into simpler steps or using consistent units, we prevent the mixed-unit error.  Always ensure calculations within `calc()` use compatible units to avoid unexpected behavior across different browsers.
